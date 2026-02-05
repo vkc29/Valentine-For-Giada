@@ -14,7 +14,7 @@ p { font-size: 1.1rem; color: #555; line-height: 1.5; }
 .btn-container { margin-top: 20px; position: relative; height: 60px; }
 button { font-size: 1.2rem; padding: 12px 30px; border: none; border-radius: 50px; cursor: pointer; font-weight: bold; outline: none; -webkit-tap-highlight-color: transparent; }
 #yesBtn { background-color: #d32f2f; color: white; box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3); position: relative; z-index: 10; }
-#noBtn { background-color: #cfd8dc; color: #333; position: absolute; left: 50%; transform: translateX(20px); transition: all 0.3s ease-out; /* Lateral Velocity Feel */ }
+#noBtn { background-color: #cfd8dc; color: #333; position: absolute; left: 50%; transform: translateX(20px); transition: all 0.3s ease-out; }
 #start-screen { display: block; }
 #question-screen { display: none; }
 #success-message { display: none; }
@@ -29,13 +29,13 @@ button { font-size: 1.2rem; padding: 12px 30px; border: none; border-radius: 50p
 </audio>
 <div class="container">
 <div id="start-screen">
-<h1>For My Giada, My Forever, My sally ❤️</h1>
+<h1>For Giada ❤️</h1>
 <p>Tap to start...</p>
 <button class="start-btn" onclick="startExperience()">Open 💌</button>
 </div>
 <div id="question-screen">
 <div class="gif-container">
-<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJmZzZ6ZzR0bmRwamZ6ZzR0bmRwamZ6ZzR0bmRwamZ6ZzR0JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/B1CrvUCoMx3GRTuMPl/giphy.gif" alt="Sally and McQueen">
+<img src="https://media.tenor.com/wa7Y7efOdf7AAAAC/wa7Y7efOdf7.gif" alt="Sally and McQueen">
 </div>
 <h1>Will you be my Valentine?</h1>
 <p>From your McQueen 🚗💨</p>
@@ -46,7 +46,7 @@ button { font-size: 1.2rem; padding: 12px 30px; border: none; border-radius: 50p
 </div>
 <div id="success-message">
 <div class="gif-container">
-<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJmZzZ6ZzR0bmRwamZ6ZzR0bmRwamZ6ZzR0bmRwamZ6ZzR0JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/wa7Y7efOdf7y987mYI/giphy.gif" alt="Success Kiss">
+<img src="https://media.tenor.com/23365256/23365256.gif" alt="Success Kiss">
 </div>
 <h1>I knew it! ❤️</h1>
 <p class="promise-text">I promise Giada, My Sally, I will be your forever Valentine and Celebrate you sempre 🩷🩷🩷</p>
@@ -63,13 +63,12 @@ document.getElementById('question-screen').style.display = 'block';
 
 function moveButton() {
 var noBtn = document.getElementById('noBtn');
-// Lateral movement logic
 var x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
 var y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
 noBtn.style.position = 'fixed';
 noBtn.style.left = x + 'px';
 noBtn.style.top = y + 'px';
-noBtn.style.transform = 'none'; // Clear the initial transform
+noBtn.style.transform = 'none'; 
 }
 
 function sheSaidYes() {
